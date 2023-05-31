@@ -6,7 +6,7 @@ const Formulario = () => {
     return (
         <>
             <div className='border rounded text-light mt-5'>
-                <div className='bg-black p-3 text-center rounded'>
+                <div className='p-3 text-center rounded form-title'>
                     <h2>Llenar el formulario para crear una cita</h2>
                 </div>
                 <div className='p-5 bg-dark'>
