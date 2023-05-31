@@ -14,6 +14,14 @@ const Formulario = () => {
         console.log(citas);
     }
 
+    const borrarCita = (citaABorrar) => {
+        const nuevaListaCitas = citas.filter((cita) => {
+            //las citas se borran por el nombre del dueño, intenté hacer que sea por nombre de dueño y mascota pero no me salió
+           return cita.nombreDuenio !== citaABorrar.nombreDuenio;
+        })
+        setCitas(nuevaListaCitas);
+    }
+
     return (
         <>
             <div className='border rounded text-light mt-5'>
@@ -79,12 +87,10 @@ const Formulario = () => {
                         <div className='row mb-4'>
                             <FormLabel className='col-md-3'>Sintomas:</FormLabel>
                             <input className='col-md-9' placeholder='describir sintomas' type='text' {...register("sintomas", {
-                                required: true,
                                 maxLength: 100,
                                 min:10
                             })}></input>
                             <div className='error-container'>
-                                {errors.sintomas?.type === "required" && <div className='error-msg'>Debe ingresar los sintomas</div>}
                                 {errors.sintomas?.type === "maxLength" && <div className='error-msg'>La cantidad de caracteres no puede ser mayor a 100</div>}
                                 {errors.sintomas?.type === "minLength" && <div className='error-msg'>La cantidad de caracteres no puede ser menor a 10</div>}
                             </div>
@@ -92,7 +98,7 @@ const Formulario = () => {
                         <div><Button type="submit">Enviar</Button></div>
                     </Form>
                 </div>
-                <ListaCitas citas={citas}></ListaCitas>
+                <ListaCitas citas={citas} borrarCita={borrarCita}></ListaCitas>
             </div>
         </>
     );

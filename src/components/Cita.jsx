@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Card } from 'react-bootstrap';
 
-const Cita = ({ cita }) => {
+const Cita = ({ cita, borrarCita }) => {
     return (
         <Card className="col-10 col-lg-3 mb-3 mx-1 p-1 bg-dark text-light">
             <Card.Header className='d-flex align-items-center'>
@@ -20,11 +20,11 @@ const Cita = ({ cita }) => {
                 <div className='w-50'>
                     <div className='form-title'><p>{cita.fecha}</p></div>
                     <div className='form-title'><p>{cita.hora}</p></div>
-                    <div className='form-title'><p>{cita.sintomas}</p></div>
+                    <div className='form-title'><p>{cita.sintomas ? cita.sintomas : "No se incluyeron sintomas"}</p></div>
                 </div>
             </div>
             <Card.Footer className='p-3'>
-                <Button className='float-end' variant="danger">Borrar</Button>
+                <Button className='float-end' variant="danger" onClick={() => {borrarCita(cita)}}>Borrar</Button>
             </Card.Footer>
         </Card>
     );
