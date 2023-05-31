@@ -1,10 +1,19 @@
 import './App.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Formulario from './components/Formulario';
+import { Container } from 'react-bootstrap';
 
 function App() {
 
   return (
     <>
-      <h1>proyecto react</h1>
+    <div>
+      <Container>
+        <h1>Admministrador pacientes de veterinaria</h1>
+        <Formulario></Formulario>
+
+      </Container>
+    </div>
     </>
   )
 }

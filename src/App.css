@@ -1,0 +1,18 @@
+.form-group {
+    display: flex;
+    justify-content: space-;
+    align-items: center;
+}
+
+
+#root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(27, 47, 47);
+    box-sizing: border-box;
+}
+  
+.main {
+    flex-grow: 1;
+}
