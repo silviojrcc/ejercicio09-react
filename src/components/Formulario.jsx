@@ -11,7 +11,6 @@ const Formulario = () => {
 
     const onSubmit = (data) => {
         setCitas([...citas, data]);
-        console.log(citas);
         reset();
     }
 

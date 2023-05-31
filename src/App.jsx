@@ -9,7 +9,7 @@ function App() {
     <>
     <div>
       <Container>
-        <h1>Admministrador pacientes de veterinaria</h1>
+        <h1 className='text-light m-3'>Admministrador pacientes de veterinaria</h1>
         <Formulario></Formulario>
 
       </Container>
