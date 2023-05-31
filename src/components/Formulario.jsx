@@ -92,7 +92,7 @@ const Formulario = () => {
                         <div><Button type="submit">Enviar</Button></div>
                     </Form>
                 </div>
-                <ListaCitas></ListaCitas>
+                <ListaCitas citas={citas}></ListaCitas>
             </div>
         </>
     );
