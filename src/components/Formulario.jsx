@@ -2,12 +2,17 @@ import { Form, FormControl, FormGroup, FormLabel, Button } from 'react-bootstrap
 import ListaCitas from './ListaCitas';
 import { useForm } from 'react-hook-form';
 import { validarFecha } from './validators.js';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const Formulario = () => {
 
     const { register, formState: { errors }, handleSubmit, reset } = useForm();
-    const [citas, setCitas] = useState([]);
+    const [citas, setCitas] = useState(JSON.parse(localStorage.getItem("citas")) || []);
+
+    useEffect(() => {
+        localStorage.setItem("citas", JSON.stringify(citas));
+    },[citas]);
+    
 
     const onSubmit = (data) => {
         setCitas([...citas, data]);
