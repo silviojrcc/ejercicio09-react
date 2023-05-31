@@ -6,18 +6,18 @@ import { useState } from 'react';
 
 const Formulario = () => {
 
-    const { register, formState: { errors }, handleSubmit } = useForm();
+    const { register, formState: { errors }, handleSubmit, reset } = useForm();
     const [citas, setCitas] = useState([]);
 
     const onSubmit = (data) => {
         setCitas([...citas, data]);
         console.log(citas);
+        reset();
     }
 
     const borrarCita = (citaABorrar) => {
         const nuevaListaCitas = citas.filter((cita) => {
-            //las citas se borran por el nombre del dueño, intenté hacer que sea por nombre de dueño y mascota pero no me salió
-           return cita.nombreDuenio !== citaABorrar.nombreDuenio;
+           return cita.fecha !== citaABorrar.fecha && cita.hora !== citaABorrar.hora;
         })
         setCitas(nuevaListaCitas);
     }
