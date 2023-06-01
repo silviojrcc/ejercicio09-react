@@ -1,6 +1,6 @@
 # Primer trabajo práctico react
 
-Este es el ejercicio número 10 del primer trabajo práctico de react de la escuela de programación [Rolling Code](https://rollingcodeschool.com/). Este ejercicio es un formulario desarrollado con React que permite agregar citas de una veterinaria y guardarlas en el almacenamiento local del navegador (local storage). El formulario está validado utilizando React Hook Forms y utiliza React Bootstrap para el maquetado.
+Este es el ejercicio número 9 del primer trabajo práctico de react de la escuela de programación [Rolling Code](https://rollingcodeschool.com/). Este ejercicio es un formulario desarrollado con React que permite agregar citas de una veterinaria y guardarlas en el almacenamiento local del navegador (local storage). El formulario está validado utilizando React Hook Forms y utiliza React Bootstrap para el maquetado.
 
 Podes ver la página haciendo click [aquí](https://ejercicio09-react-veterinaria.netlify.app/)
 
